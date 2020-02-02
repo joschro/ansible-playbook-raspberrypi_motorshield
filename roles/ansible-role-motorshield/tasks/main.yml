@@ -1,0 +1,13 @@
+---
+
+- name: Install packages
+  package:
+    name: vim,python3-RPi.GPIO
+    state: present
+  tags: packages
+
+- name: Clone MotorShield git repo
+  git:
+    repo: 'https://github.com/sbcshop/MotorShield.git'
+    dest: /root/
+    update: yes
